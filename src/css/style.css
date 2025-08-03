@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background-color: rgb(229, 229, 229);
+}
+
+.container {
+    position: relative;
+    border-radius: 19px;
+    width: 655px;
+    height: 347px;
+    background-color: #FCFCFC;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 7px 9px 4px rgba(10, 10, 10, 0.2);
+}
+
+#jogador {
+    width: 278px;
+    height: 293px;
+    transform: translateX(-90px);
+}
+
+.seta {
+    width: 15px;
+    height: 9px;
+}
+
+.cinza {
+    background: url(../img/seta.png)no-repeat center center/cover;
+}
+
+.setaLaranja {
+    background: url(../img/setaLaranja.png)no-repeat center center/cover;
+}
+
+.container .acordiao {
+    position: absolute;
+    max-width: 390px;
+    height: auto;
+    margin-left: 230px;
+}
+
+.container .acordiao h1 {
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.container .acordiao .fixo {
+    font-weight: 500;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+}
+
+.container .acordiao p {
+    font-weight: 300;
+    font-size: 15px;
+
+}
+
+.desaparece {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.apareceu {
+    margin-bottom: 10px;
+    opacity: 1;
+}
