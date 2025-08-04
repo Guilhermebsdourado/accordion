@@ -1,14 +1,10 @@
-const botoes = document.querySelectorAll(".fixo");
-const informacoes = document.getElementsByClassName("texto");
-const setas = document.getElementsByClassName("seta");
+const itensPerguntasERespostas = document.querySelectorAll(".item");
 
-informacoes.forEach(function(item) {
-    item.addclassListener("click", function () {
-        const itemAtivoAtual =document.querySelector(".ativo");
-
+itensPerguntasERespostas.forEach(function(item){
+    item.addEventListener("click", function(){
+        const itemAtivoAtual = document.querySelector(".ativo");
         itemAtivoAtual.classList.remove("ativo");
+        
         item.classList.add("ativo");
-
-
     });
 });
