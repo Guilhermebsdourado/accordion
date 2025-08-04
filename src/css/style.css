@@ -5,6 +5,7 @@ main {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: #E5E5E5;
 }
 
 .acordeon {
@@ -14,7 +15,8 @@ main {
     justify-content: center;
     width: 655px;
     height: 347px;
-    box-shadow: 3px 15px 30px 10px rgba(0 , 0 , 0 , 0.3);
+    background-color: #fff;
+    box-shadow: 0px 27px 49px -25px rgba(0 , 0 , 0 , 0.3);
     border-radius: 30px;
 }
 
@@ -29,14 +31,9 @@ img {
     font-size: 25px;
 }
 
-.pergunta {
-    font-weight: 500;
-    font-size: 17px;
-}
-
 .conteudo {
     position: relative;
-    max-width: 390px;
+    min-width: 390px;
     height: auto;
     left: -50px;
 }
@@ -49,8 +46,39 @@ img {
     background-size: 12px;
     border-bottom: 1px solid #ccc;
     margin: 10px 0;
+    max-width: 90%;
 }
 
 .acordeon .items .item:last-child {
     border-bottom: none;
+}
+
+.pergunta {
+    font-weight: 500;
+    font-size: 17px;
+    padding-bottom: 15px;
+    transition: 0.2s ease;
+}
+
+.pergunta:hover {
+    color: #f47c57;
+}
+
+.resposta {
+    display: none;
+    padding-bottom: 15px;
+    font-weight: 300;
+}
+
+.acordeon .items .item.ativo h2 {
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.acordeon .items .item.ativo .resposta {
+    display: block;
+}
+
+.acordeon .items .item.ativo {
+    background-image: url(../img/setaLaranja.png);
 }
