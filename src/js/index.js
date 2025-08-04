@@ -1,29 +1,14 @@
-const botoes = document.getElementsByClassName("fixo");
+const botoes = document.querySelectorAll(".fixo");
 const informacoes = document.getElementsByClassName("texto");
 const setas = document.getElementsByClassName("seta");
 
-for (let i = 0; i < botoes.length; i++) {
-    botoes[i].addEventListener("click", () => {
-        const mudar = informacoes[i].classList.contains("desaparece");
+informacoes.forEach(function(item) {
+    item.addclassListener("click", function () {
+        const itemAtivoAtual =document.querySelector(".ativo");
 
-        mudarSeta(i, mudar);
+        itemAtivoAtual.classList.remove("ativo");
+        item.classList.add("ativo");
 
-        if(mudar){
-            informacoes[i].classList.remove("desaparece");
-            informacoes[i].classList.add("apareceu");
-        } else {
-            informacoes[i].classList.remove("apareceu");
-            informacoes[i].classList.add("desaparece");
-        }
+
+    });
 });
-}
-
-function mudarSeta(i, mudando) {
-    if (mudando) {
-        setas[i].classList.remove("cinza");
-        setas[i].classList.add("setaLaranja");
-    } else {
-        setas[i].classList.remove("setaLaranja");
-        setas[i].classList.add("cinza");
-    }
-}
